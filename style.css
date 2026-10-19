@@ -184,3 +184,108 @@ footer small { color: #e5b9ca; font-size: .75rem; letter-spacing: .04em; }
   .photo-card img, .photo-placeholder { aspect-ratio: 4 / 3.5; }
   .scroll-note { font-size: .55rem; }
 }
+/* Password screen - mobile friendly */
+.password-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #fff0f6, #ffc6dc, #ffe6ef);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+.password-card {
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
+  padding: 32px 24px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #ffd1e2;
+  border-radius: 25px;
+  box-shadow: 0 15px 45px rgba(217, 77, 132, 0.15);
+}
+
+.password-card .heart-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.password-card .small-title {
+  color: #d94d84;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.password-card h1 {
+  color: #c93e77;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(30px, 8vw, 40px);
+  line-height: 1.2;
+  margin: 16px 0;
+}
+
+.password-card .subtitle {
+  color: #916b7c;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+#passwordForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+#passwordInput {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #f0b4cc;
+  border-radius: 12px;
+  outline: none;
+  background: white;
+  font-size: 16px;
+}
+
+#passwordForm button {
+  display: block;
+  width: 100%;
+  padding: 14px 10px;
+  color: white;
+  background: #e85d91;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#errorMessage {
+  color: #c62855;
+  font-size: 13px;
+  margin: 0;
+}
+
+.password-card .footer-text {
+  margin-top: 22px;
+  color: #c47797;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .password-screen {
+    padding: 16px;
+  }
+
+  .password-card {
+    padding: 28px 20px;
+  }
+}
