@@ -31,3 +31,21 @@ function createHeart(fromButton = false) {
   setTimeout(() => heart.remove(), 11500);
 }
 setInterval(() => createHeart(), 900);
+
+const correctPassword = "MAWW";
+
+document
+  .getElementById("passwordForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const enteredPassword =
+      document.getElementById("passwordInput").value;
+
+    if (enteredPassword === correctPassword) {
+      document.getElementById("passwordScreen").style.display = "none";
+    } else {
+      document.getElementById("errorMessage").textContent =
+        "Oops! That's not our secret password. Try again 💗";
+    }
+  });
